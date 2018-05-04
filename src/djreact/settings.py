@@ -157,3 +157,11 @@ EMAIL_HOST_USER = get_secret('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = get_secret('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = get_secret('EMAIL_PORT')
 EMAIL_USE_TLS = True
+
+
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'BUNDLE_DIR_NAME': 'bundles/local/',  # end with slash
+        'STATS_FILE': os.path.join(os.path.dirname(BASE_DIR), 'webpack-stats-local.json'),
+    }
+}
